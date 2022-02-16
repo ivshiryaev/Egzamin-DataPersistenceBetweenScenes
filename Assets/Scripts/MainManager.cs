@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
+    public Text playerName;
+
     public Brick BrickPrefab;
     public int LineCount = 6;
     public Rigidbody Ball;
@@ -18,8 +20,11 @@ public class MainManager : MonoBehaviour
     
     private bool m_GameOver = false;
 
-    
-    // Start is called before the first frame update
+
+    public void Awake()
+    {
+        playerName.text = "Name : " + PlayerName.playerName;
+    }
     void Start()
     {
         const float step = 0.6f;
