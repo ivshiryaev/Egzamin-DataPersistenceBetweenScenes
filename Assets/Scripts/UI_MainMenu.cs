@@ -13,7 +13,15 @@ public class UI_MainMenu : MonoBehaviour
 {
     public TMP_InputField inputField_playerName;
     public GameObject button_Start;
-       public void LoadNextScene()
+
+
+    private void Start()
+    {
+
+    }
+
+
+    public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

@@ -80,6 +80,6 @@ public class MainManager : MonoBehaviour
 
     public void SaveScore()
     {
-        HighestScore.SaveHighScore(m_Points);
+        HighScoreData.SaveHighScore(m_Points);
     }
 }
