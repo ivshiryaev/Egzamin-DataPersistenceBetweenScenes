@@ -17,6 +17,7 @@ public class UI_GamePlay : MonoBehaviour
     public void Awake()
     {
         playerName.text = playerName.text + PlayerName.playerName;
+        HighestScoreText.text = "HighScore : " + HighestScore.Value.ToString();
     }
 
     public void UpdateScore()

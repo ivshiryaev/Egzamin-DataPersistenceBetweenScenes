@@ -6,13 +6,16 @@ public class HighestScore : MonoBehaviour
 {
     public static int Value { get; set; }
 
-    private void Awake()
+    public static void SaveHighScore(int value)
     {
-        
+        if (IsValueHigherThenCurrentHighScore(value))
+        {
+            Value = value;
+        }
     }
-    private void Start()
+
+    private static bool IsValueHigherThenCurrentHighScore(int value)
     {
-        if(Value == 0)
-            Value = 0;
+        return value > Value ? true : false;
     }
 }

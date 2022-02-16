@@ -74,5 +74,12 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         UI_gamePlayScript.ShowGameOver();
+
+        SaveScore();
+    }
+
+    public void SaveScore()
+    {
+        HighestScore.SaveHighScore(m_Points);
     }
 }
